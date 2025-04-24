@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Video Chat Meeting</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="meeting-container">
+        <div id="videos-grid"></div>
+        
+        <div id="controls">
+            <div class="control-container" id="micButton" data-tooltip="Mute">
+                <i class="fas fa-microphone"></i>
+            </div>
+            
+            <div class="control-container" id="cameraButton" data-tooltip="Stop Video">
+                <i class="fas fa-video"></i>
+            </div>
+            
+            <div class="control-container" id="screenShareButton" data-tooltip="Share Screen">
+                <i class="fas fa-desktop"></i>
+            </div>
+            
+            <div class="control-container" id="participantsButton" data-tooltip="Participants">
+                <i class="fas fa-users"></i>
+                <span id="participants-count">1</span>
+            </div>
+            
+            <div class="control-container" id="chatButton" data-tooltip="Chat">
+                <i class="fas fa-comment-alt"></i>
+            </div>
+
+            <div class="control-container success" id="createMeetingButton" data-tooltip="New Meeting">
+                <i class="fas fa-plus-circle"></i>
+            </div>
+            
+            <div class="control-container danger" id="leaveButton" data-tooltip="Leave">
+                <i class="fas fa-phone-slash"></i>
+            </div>
+        </div>
+        
+        <div id="chat-container">
+            <div id="chat-header">
+                <h3>Meeting Chat</h3>
+                <button id="close-chat">&times;</button>
+            </div>
+            <div id="chatbox"></div>
+            <div id="message-input-container">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+        
+        <div id="participants-container">
+            <div id="participants-header">
+                <h3>Participants (<span id="participants-count-header">1</span>)</h3>
+                <button id="close-participants">&times;</button>
+            </div>
+            <div id="participants-list"></div>
+        </div>
+        
+        <div id="screen-share-status"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
