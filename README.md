@@ -1,7 +1,6 @@
 # 🌐 WebRTC Video Conferencing App
 
-![Demo](https://i.imgur.com/JQ8wzHy.gif) <!-- Replace with your actual gif/screenshot -->
-![Uploading 1.png…]()
+![1](https://github.com/user-attachments/assets/60993290-6725-4a04-a49f-6a7cbabcaae3)
 
 
 A feature-rich peer-to-peer video chat application with screen sharing, real-time messaging, and participant management. Built with WebRTC for low-latency communication and Socket.io for signaling.
